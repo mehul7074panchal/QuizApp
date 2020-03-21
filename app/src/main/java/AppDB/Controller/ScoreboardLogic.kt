@@ -75,10 +75,10 @@ class ScoreboardLogic(var realm: Realm) {
         realm.commitTransaction()
     }
 
-    fun deletePlayer(Scoreboard: Scoreboard) {
+    fun deleteScoreboardByPlayerId(playerId: Int) {
         realm.executeTransaction { realm ->
-            val result: RealmResults<Player> =
-                realm.where(Player::class.java).equalTo(PlayerId, Scoreboard.PlayerId).findAll()
+            val result: RealmResults<Scoreboard> =
+                realm.where(Scoreboard::class.java).equalTo(PlayerId, playerId).findAll()
             result.deleteAllFromRealm()
         }
 

@@ -4,7 +4,6 @@ import android.annotation.SuppressLint;
 import android.app.Dialog;
 import android.content.Context;
 import android.content.Intent;
-import android.os.AsyncTask;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -28,6 +27,7 @@ import java.util.List;
 import java.util.Locale;
 
 import AppDB.Controller.PlayerLogic;
+import AppDB.Controller.ScoreboardLogic;
 import AppDB.Model.Player;
 import io.realm.Realm;
 
@@ -99,17 +99,13 @@ public class PlayerAdapter extends RecyclerView.Adapter<PlayerAdapter.ViewHolder
         });
 
         holder.btnD.setOnClickListener(v -> {
-          /*  AsyncTask.execute(new Runnable() {
-                @Override
-                public void run() {
 
-                }
-            });*/
 
             Realm realm = Realm.getDefaultInstance();
             PlayerLogic playerLogic = new PlayerLogic(realm);
+            new ScoreboardLogic(realm).deleteScoreboardByPlayerId(holder.mItem.getPlayerId());
+
             playerLogic.deletePlayer(holder.mItem);
-            realm.close();
 
             mValues.remove(position);
             notifyItemRemoved(position);
