@@ -3,7 +3,6 @@ package AppDB.Controller
 import AppDB.Model.Player
 import android.annotation.SuppressLint
 import io.realm.Realm
-import io.realm.RealmModel
 import io.realm.RealmResults
 import org.json.JSONArray
 
@@ -41,7 +40,10 @@ class PlayerLogic {
       */
     fun addOrUpdatePlayer(Player: Player) {
 
-        realm.beginTransaction()
+        if(!realm.isInTransaction){
+            realm.beginTransaction()
+
+        }
         realm.insertOrUpdate(Player)
         realm.commitTransaction()
 
@@ -80,12 +82,12 @@ class PlayerLogic {
     }
 
     fun deletePlayer(player: Player) {
-        var lstPly = getPlayers();
+        realm.executeTransaction { realm ->
+            val result: RealmResults<Player> =
+                realm.where(Player::class.java).equalTo(PlayerId, player.PlayerId).findAll()
+            result.deleteAllFromRealm()
+        }
 
-        realm.beginTransaction()
-        lstPly.deleteFromRealm(lstPly.indexOf(lstPly.first { player -> player.FirstName == player.FirstName }))
-       // realm.de   (Player::class.java)
-        realm.commitTransaction()
     }
 
     //find all objects in the Player.class

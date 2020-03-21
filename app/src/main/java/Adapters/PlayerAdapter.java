@@ -4,6 +4,7 @@ import android.annotation.SuppressLint;
 import android.app.Dialog;
 import android.content.Context;
 import android.content.Intent;
+import android.os.AsyncTask;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -32,18 +33,17 @@ import io.realm.Realm;
 
 public class PlayerAdapter extends RecyclerView.Adapter<PlayerAdapter.ViewHolder> {
 
-private List<Player> mValues;
+    private List<Player> mValues;
 
 
-private Context mcontext;
+    private Context mcontext;
 
 
-private ArrayList<Player> arraylist;
+    private ArrayList<Player> arraylist;
 
 
-        String searchText = "";
-        String batchName;
-
+    String searchText = "";
+    String batchName;
 
 
     public PlayerAdapter(Context context, List<Player> sLst) {
@@ -70,40 +70,46 @@ private ArrayList<Player> arraylist;
     public void onBindViewHolder(final ViewHolder holder, int position) {
         holder.mItem = mValues.get(position);
 
-        if(holder.mItem != null){
-        holder.tvP_Name.setText(holder.mItem.getFirstName());
+        if (holder.mItem != null) {
+            holder.tvP_Name.setText(holder.mItem.getFirstName());
 
-        ColorGenerator generator = ColorGenerator.MATERIAL;
-
-
+            ColorGenerator generator = ColorGenerator.MATERIAL;
 
 
-        char ch = 'P';
+            char ch = 'P';
 
-        if(holder.mItem.getFirstName() != null && holder.mItem.getFirstName().length() > 0){
+            if (holder.mItem.getFirstName() != null && holder.mItem.getFirstName().length() > 0) {
 
-            ch = holder.mItem.getFirstName().charAt(0);
-        }
+                ch = holder.mItem.getFirstName().charAt(0);
+            }
 
 
-        int colorRandam = generator.getColor(Character.toUpperCase(ch));
+            int colorRandam = generator.getColor(Character.toUpperCase(ch));
 
-        TextDrawable drawable = TextDrawable.builder()
-                .buildRound(Character.toUpperCase(holder.mItem.getFirstName().charAt(0))+"", colorRandam);
+            TextDrawable drawable = TextDrawable.builder()
+                    .buildRound(Character.toUpperCase(holder.mItem.getFirstName().charAt(0)) + "", colorRandam);
 
-        holder.ivP.setImageDrawable(drawable);
+            holder.ivP.setImageDrawable(drawable);
         }
 
 
         holder.btnE.setOnClickListener(v -> {
-            update(holder.mItem,position);
+            update(holder.mItem, position);
 
         });
 
         holder.btnD.setOnClickListener(v -> {
+          /*  AsyncTask.execute(new Runnable() {
+                @Override
+                public void run() {
+
+                }
+            });*/
+
             Realm realm = Realm.getDefaultInstance();
             PlayerLogic playerLogic = new PlayerLogic(realm);
             playerLogic.deletePlayer(holder.mItem);
+            realm.close();
 
             mValues.remove(position);
             notifyItemRemoved(position);
@@ -120,50 +126,47 @@ private ArrayList<Player> arraylist;
     }
 
     public void add(Player obj) {
-        mValues.add(obj);
+
+        if (obj.getFirstName() != null) {
+            obj = new PlayerLogic(Realm.getDefaultInstance()).getPlayer(obj.getFirstName()).first();
+            mValues.add(obj);
+        }
 
     }
 
-    public void remove(Player obj) {
-        mValues.remove(obj);
 
+
+    public class ViewHolder extends RecyclerView.ViewHolder {
+        final View mView;
+
+        final TextView tvP_Name;
+        final ImageButton btnD, btnE;
+        Player mItem;
+        final ImageView ivP;
+
+        public ViewHolder(View view) {
+            super(view);
+            mView = view;
+
+
+            tvP_Name = view.findViewById(R.id.tvName);
+            btnD = view.findViewById(R.id.btnPDelete);
+            btnE = view.findViewById(R.id.btnPEdit);
+            ivP = view.findViewById(R.id.ivProfile);
+
+
+            view.setOnClickListener(v -> {
+                mcontext.startActivity(new Intent(mcontext, HomeActivity.class).putExtra("player", mItem));
+            });
+
+
+        }
+
+        @Override
+        public String toString() {
+            return "";
+        }
     }
-
-public class ViewHolder extends RecyclerView.ViewHolder {
-    final View mView;
-
-    final TextView tvP_Name;
-    final ImageButton btnD, btnE;
-    Player mItem;
-    final ImageView ivP;
-
-    public ViewHolder(View view) {
-        super(view);
-        mView = view;
-
-
-        tvP_Name = view.findViewById(R.id.tvName);
-        btnD = view.findViewById(R.id.btnPDelete);
-        btnE = view.findViewById(R.id.btnPEdit);
-        ivP = view.findViewById(R.id.ivProfile);
-
-
-
-        view.setOnClickListener(v -> {
-             mcontext.startActivity(new Intent(mcontext, HomeActivity.class).putExtra("player",mItem));
-        });
-
-
-
-
-
-    }
-
-    @Override
-    public String toString() {
-        return "";
-    }
-}
 
 
     // Filter Class
@@ -201,20 +204,26 @@ public class ViewHolder extends RecyclerView.ViewHolder {
         dialogButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                if (edtname.getText().toString().trim().length() > 0) {
+                    PlayerLogic playerLogic = new PlayerLogic(realm);
+                    if (playerLogic.getPlayer(edtname.getText().toString()).size() > 1) {
+                        Toast.makeText(mcontext, "Already exist", Toast.LENGTH_LONG).show();
 
-                PlayerLogic playerLogic = new PlayerLogic(realm);
-               if(playerLogic.getPlayer(edtname.getText().toString()).size() > 1){
-                   Toast.makeText(mcontext,"Already exist",Toast.LENGTH_LONG).show();
+                    } else {
+                        realm.beginTransaction();
+                        player.setFirstName(edtname.getText().toString());
+                        playerLogic.addOrUpdatePlayer(player);
 
-               }else {
-                   player.setFirstName(edtname.getText().toString());
-                   playerLogic.addOrUpdatePlayer(player);
-                   mValues.remove(pos);
-                   mValues.add(pos,player);
-                   dialog.dismiss();
-                   notifyItemChanged(pos);
+                        mValues.remove(pos);
+                        mValues.add(pos, playerLogic.getPlayer(edtname.getText().toString()).first());
+                        dialog.dismiss();
+                        notifyItemChanged(pos);
 
-               }
+                    }
+                }else {
+                   edtname.setError("Please enter name here.");
+
+                }
 
             }
         });
