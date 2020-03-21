@@ -1,0 +1,185 @@
+{
+
+  "questions": [
+    {
+     
+    
+     
+      "question": "Which company was established on April 1st, 1976 by Steve Jobs, Steve Wozniak and Ronald Wayne?",
+      "correct_answer": "Apple",
+      "incorrect_answers": [
+        "Microsoft",
+        "Atari",
+        "Commodore"
+      ]
+    },
+    {
+     
+    
+     
+      "question": "In any programming language, what is the most common way to iterate through an array?",
+      "correct_answer": "&#039;For&#039; loops",
+      "incorrect_answers": [
+        "&#039;If&#039; Statements",
+        "&#039;Do-while&#039; loops",
+        "&#039;While&#039; loops"
+      ]
+    },
+    {
+     
+    
+     
+      "question": "What does the &quot;MP&quot; stand for in MP3?",
+      "correct_answer": "Moving Picture",
+      "incorrect_answers": [
+        "Music Player",
+        "Multi Pass",
+        "Micro Point"
+      ]
+    },
+    {
+     
+    
+     
+      "question": "According to the International System of Units, how many bytes are in a kilobyte of RAM?",
+      "correct_answer": "1000",
+      "incorrect_answers": [
+        "512",
+        "1024",
+        "500"
+      ]
+    },
+    {
+     
+    
+     
+      "question": "When Gmail first launched, how much storage did it provide for your email?",
+      "correct_answer": "1GB",
+      "incorrect_answers": [
+        "512MB",
+        "5GB",
+        "Unlimited"
+      ]
+    },
+    {
+     
+    
+     
+      "question": "Which computer hardware device provides an interface for all other connected devices to communicate?",
+      "correct_answer": "Motherboard",
+      "incorrect_answers": [
+        "Central Processing Unit",
+        "Hard Disk Drive",
+        "Random Access Memory"
+      ]
+    },
+    {
+     
+    
+     
+      "question": "If you were to code software in this language you&#039;d only be able to type 0&#039;s and 1&#039;s.",
+      "correct_answer": "Binary",
+      "incorrect_answers": [
+        "JavaScript",
+        "C++",
+        "Python"
+      ]
+    },
+    {
+     
+    
+     
+      "question": "The series of the Intel HD graphics generation succeeding that of the 5000 and 6000 series (Broadwell) is called:",
+      "correct_answer": "HD Graphics 500",
+      "incorrect_answers": [
+        "HD Graphics 700 ",
+        "HD Graphics 600",
+        "HD Graphics 7000"
+      ]
+    },
+    {
+     
+    
+     
+      "question": "In web design, what does CSS stand for?",
+      "correct_answer": "Cascading Style Sheet",
+      "incorrect_answers": [
+        "Counter Strike: Source",
+        "Corrective Style Sheet",
+        "Computer Style Sheet"
+      ]
+    },
+    {
+     
+    
+     
+      "question": "What is the code name for the mobile operating system Android 7.0?",
+      "correct_answer": "Nougat",
+      "incorrect_answers": [
+        "Ice Cream Sandwich",
+        "Jelly Bean",
+        "Marshmallow"
+      ]
+    },
+    {
+     
+    
+     
+      "question": "How many kilobytes in one gigabyte?",
+      "correct_answer": "1000000",
+      "incorrect_answers": [
+        "1024",
+        "1000",
+        "1048576"
+      ]
+    },
+    {
+     
+    
+     
+      "question": "In &quot;Hexadecimal&quot;, what color would be displayed from the color code? &quot;#00FF00&quot;?",
+      "correct_answer": "Green",
+      "incorrect_answers": [
+        "Red",
+        "Blue",
+        "Yellow"
+      ]
+    },
+    {
+     
+    
+     
+      "question": "The numbering system with a radix of 16 is more commonly referred to as ",
+      "correct_answer": "Hexidecimal",
+      "incorrect_answers": [
+        "Binary",
+        "Duodecimal",
+        "Octal"
+      ]
+    },
+    {
+     
+    
+     
+      "question": "Which programming language shares its name with an island in Indonesia?",
+      "correct_answer": "Java",
+      "incorrect_answers": [
+        "Python",
+        "C",
+        "Jakarta"
+      ]
+    },
+    {
+     
+    
+     
+      "question": "What does the computer software acronym JVM stand for?",
+      "correct_answer": "Java Virtual Machine",
+      "incorrect_answers": [
+        "Java Vendor Machine",
+        "Java Visual Machine",
+        "Just Virtual Machine"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,155 @@
+{
+
+  "questions": [
+    {
+     
+      "question": "In past times, what would a gentleman keep in his fob pocket?",
+      "correct_answer": "Watch",
+      "incorrect_answers": [
+        "Money",
+        "Keys",
+        "Notebook"
+      ]
+    },
+    {
+      
+      "question": "What is the largest organ of the human body?",
+      "correct_answer": "Skin",
+      "incorrect_answers": [
+        "Heart",
+        "large Intestine",
+        "Liver"
+      ]
+    },
+    {
+      
+      "question": "What alcoholic drink is made from molasses?",
+      "correct_answer": "Rum",
+      "incorrect_answers": [
+        "Gin",
+        "Vodka",
+        "Whisky"
+      ]
+    },
+    {
+
+      "question": "What is the shape of the toy invented by Hungarian professor Ernő Rubik?",
+      "correct_answer": "Cube",
+      "incorrect_answers": [
+        "Sphere",
+        "Cylinder",
+        "Pyramid"
+      ]
+    },
+    {
+
+      "question": "What is the name of the Jewish New Year?",
+      "correct_answer": "Rosh Hashanah",
+      "incorrect_answers": [
+        "Elul",
+        "New Year",
+        "Succoss"
+      ]
+    },
+    {
+
+      "question": "What is the Spanish word for &quot;donkey&quot;?",
+      "correct_answer": "Burro",
+      "incorrect_answers": [
+        "Caballo",
+        "Toro",
+        "Perro"
+      ]
+    },
+    {
+
+      "question": "How tall is the Burj Khalifa?",
+      "correct_answer": "2,722 ft",
+      "incorrect_answers": [
+        "2,717 ft",
+        "2,546 ft",
+        "3,024 ft"
+      ]
+    },
+    {
+
+      "question": "Which of the following presidents is not on Mount Rushmore?",
+      "correct_answer": "John F. Kennedy",
+      "incorrect_answers": [
+        "Theodore Roosevelt",
+        "Abraham Lincoln",
+        "Thomas Jefferson"
+      ]
+    },
+    {
+
+      "question": "What is Tasmania?",
+      "correct_answer": "An Australian State",
+      "incorrect_answers": [
+        "A flavor of Ben and Jerry&#039;s ice-cream",
+        "A Psychological Disorder",
+        "The Name of a Warner Brothers Cartoon Character"
+      ]
+    },
+    {
+
+      "question": "What zodiac sign is represented by a pair of scales?",
+      "correct_answer": "Libra",
+      "incorrect_answers": [
+        "Aries",
+        "Capricorn",
+        "Sagittarius"
+      ]
+    },
+    {
+
+      "question": "What is Cynophobia the fear of?",
+      "correct_answer": "Dogs",
+      "incorrect_answers": [
+        "Birds",
+        "Flying",
+        "Germs"
+      ]
+    },
+    {
+
+      "question": "According to the nursery rhyme, what fruit did Little Jack Horner pull out of his Christmas pie?",
+      "correct_answer": "Plum",
+      "incorrect_answers": [
+        "Apple",
+        "Peach",
+        "Pear"
+      ]
+    },
+    {
+
+      "question": "The Flag of the European Union has how many stars on it?",
+      "correct_answer": "12",
+      "incorrect_answers": [
+        "10",
+        "14",
+        "16"
+      ]
+    },
+    {
+
+      "question": "What is the closest planet to our solar system&#039;s sun?",
+      "correct_answer": "Mercury",
+      "incorrect_answers": [
+        "Mars",
+        "Jupiter",
+        "Earth"
+      ]
+    },
+    {
+
+      "question": "Earth is located in which galaxy?",
+      "correct_answer": "The Milky Way Galaxy",
+      "incorrect_answers": [
+        "The Mars Galaxy",
+        "The Galaxy Note",
+        "The Black Hole"
+      ]
+    }
+  ]
+}

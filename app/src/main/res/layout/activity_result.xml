@@ -1,0 +1,103 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/dblue"
+    android:paddingLeft="36dp"
+    android:paddingTop="36dp"
+    android:paddingRight="36dp"
+    android:paddingBottom="36dp">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:overScrollMode="never"
+        android:scrollbars="none"
+        tools:ignore="UselessParent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/ivResult"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:gravity="center"
+                android:src="@drawable/genius" />
+
+            <TextView
+                android:id="@+id/tvQuote"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:gravity="center"
+                android:text="Genius"
+                android:textColor="#FFF"
+                android:textSize="21sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/txtp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:gravity="center"
+                android:text="TotalScore"
+                android:textColor="#ffffff"
+                android:textSize="25sp" />
+
+            <Button
+                android:id="@+id/tvGreen"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/txtp"
+                android:layout_centerHorizontal="true"
+                android:layout_gravity="center"
+                android:layout_marginTop="30dp"
+                android:background="@color/dblue"
+                android:text="25"
+                android:textColor="@color/green"
+                android:textSize="50dp" />
+
+            <TextView
+                android:id="@+id/txt"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tvGreen"
+                android:layout_marginTop="35dp"
+                android:gravity="center"
+                android:text="Total Incorrect Answer"
+                android:textColor="#ffffff"
+                android:textSize="25sp" />
+
+            <Button
+                android:id="@+id/tvRed"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/txt"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:layout_gravity="center"
+                android:layout_marginTop="30dp"
+                android:background="@color/dblue"
+                android:text="36"
+                android:textColor="@color/red"
+                android:textSize="50dp" />
+
+            <Button
+                android:id="@+id/btnDone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+                android:layout_marginTop="50dp"
+                android:background="@drawable/btn_bg"
+                android:text="Done"
+                android:textColor="@color/dblue" />
+        </LinearLayout>
+    </ScrollView>
+
+
+</RelativeLayout>

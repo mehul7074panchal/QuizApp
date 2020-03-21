@@ -1,0 +1,183 @@
+{
+ 
+  "questions": [
+    {
+     
+      "question": "Which of the following bones is not in the leg?",
+      "correct_answer": "Radius",
+      "incorrect_answers": [
+        "Patella",
+        "Tibia",
+        "Fibula "
+      ]
+    },
+    {
+     
+      
+     
+      "question": "What is the &quot;powerhouse&quot; of the Eukaryotic animal cell?",
+      "correct_answer": "Mitochondria",
+      "incorrect_answers": [
+        "Nucleus",
+        "Chloroplast",
+        "Endoplasmic Reticulum"
+      ]
+    },
+    {
+     
+      
+     
+      "question": "This element, when overcome with extreme heat and pressure, creates diamonds.",
+      "correct_answer": "Carbon",
+      "incorrect_answers": [
+        "Nitrogen",
+        "Oxygen",
+        "Hydrogen"
+      ]
+    },
+    {
+     
+      
+     
+      "question": "How many planets are in our Solar System?",
+      "correct_answer": "Eight",
+      "incorrect_answers": [
+        "Nine",
+        "Seven",
+        "Ten"
+      ]
+    },
+    {
+     
+      
+     
+      "question": "What is the powerhouse of the cell?",
+      "correct_answer": "Mitochondria",
+      "incorrect_answers": [
+        "Ribosome",
+        "Redbull",
+        "Nucleus"
+      ]
+    },
+    {
+     
+      
+     
+      "question": "How many planets make up our Solar System?",
+      "correct_answer": "8",
+      "incorrect_answers": [
+        "7",
+        "9",
+        "6"
+      ]
+    },
+    {
+     
+      
+     
+      "question": "What is the chemical makeup of water?",
+      "correct_answer": "H20",
+      "incorrect_answers": [
+        "C12H6O2",
+        "CO2",
+        "H"
+      ]
+    },
+    {
+     
+      
+     
+      "question": "What is the primary addictive substance found in tobacco?",
+      "correct_answer": "Nicotine",
+      "incorrect_answers": [
+        "Cathinone",
+        "Ephedrine",
+        "Glaucine"
+      ]
+    },
+    {
+     
+      
+     
+      "question": "Alzheimer&#039;s disease primarily affects which part of the human body?",
+      "correct_answer": "Brain",
+      "incorrect_answers": [
+        "Lungs",
+        "Skin",
+        "Heart"
+      ]
+    },
+    {
+     
+      
+     
+      "question": "What was the name of the first artificial Earth satellite, launched by the Soviet Union in 1957?",
+      "correct_answer": "Sputnik 1",
+      "incorrect_answers": [
+        "Soyuz 7K-OK",
+        "Zenit-2",
+        "Voskhod 3KV"
+      ]
+    },
+    {
+     
+      
+     
+      "question": "What does LASER stand for?",
+      "correct_answer": "Light amplifiaction by stimulated eminission of radioation",
+      "incorrect_answers": [
+        "Lite analysing by stereo ecorazer",
+        "Light ampiflier by standby energy of radio",
+        "Life antimatter by standing entry of range"
+      ]
+    },
+    {
+     
+      
+     
+      "question": "What animal takes part in Schr&ouml;dinger&#039;s most famous thought experiment?",
+      "correct_answer": "Cat",
+      "incorrect_answers": [
+        "Dog",
+        "Bat",
+        "Butterfly"
+      ]
+    },
+    {
+     
+      
+     
+      "question": "What is the speed of light in a vacuum?",
+      "correct_answer": "299,792,458 m/s",
+      "incorrect_answers": [
+        "50,461 m/s",
+        "308,215,043 m/s",
+        "751,665,014,151 m/s"
+      ]
+    },
+    {
+     
+      
+     
+      "question": "Which noble gas has the lowest atomic number?",
+      "correct_answer": "Helium",
+      "incorrect_answers": [
+        "Neon",
+        "Argon",
+        "Krypton"
+      ]
+    },
+    {
+     
+      
+     
+      "question": "What lies at the center of our galaxy?",
+      "correct_answer": "A black hole",
+      "incorrect_answers": [
+        "A wormhole",
+        "A supernova",
+        "A quasar"
+      ]
+    }
+  ]
+}
