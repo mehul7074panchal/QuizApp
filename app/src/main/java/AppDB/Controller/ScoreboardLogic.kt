@@ -1,5 +1,6 @@
 package AppDB.Controller
 
+import AppDB.Model.Player
 import AppDB.Model.Scoreboard
 import android.annotation.SuppressLint
 import io.realm.Realm
@@ -32,8 +33,11 @@ class ScoreboardLogic(var realm: Realm) {
 
       */
     fun addOrUpdateScoreboard(Scoreboard: Scoreboard) {
+        if(!realm.isInTransaction){
+            realm.beginTransaction()
 
-        realm.beginTransaction()
+        }
+
         realm.insertOrUpdate(Scoreboard)
         realm.commitTransaction()
 
@@ -71,14 +75,14 @@ class ScoreboardLogic(var realm: Realm) {
         realm.commitTransaction()
     }
 
-    /*fun deleteScoreboard(Scoreboard: Scoreboard) {
-        var lstPly = getScoreboards();
+    fun deletePlayer(Scoreboard: Scoreboard) {
+        realm.executeTransaction { realm ->
+            val result: RealmResults<Player> =
+                realm.where(Player::class.java).equalTo(PlayerId, Scoreboard.PlayerId).findAll()
+            result.deleteAllFromRealm()
+        }
 
-        realm.beginTransaction()
-        lstPly.deleteFromRealm(lstPly.indexOf(lstPly.first { Scoreboard -> Scoreboard.FirstName == Scoreboard.FirstName }))
-        // realm.de   (Scoreboard::class.java)
-        realm.commitTransaction()
-    }*/
+    }
 
     //find all objects in the Scoreboard.class
     fun getScoreboards(): RealmResults<Scoreboard> {

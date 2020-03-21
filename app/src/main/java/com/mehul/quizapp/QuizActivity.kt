@@ -77,13 +77,13 @@ class QuizActivity : AppCompatActivity() {
                     try {
 
 
-                        realm.beginTransaction()
-                        val scoreb = scoreboard.first()
-                        scoreb.score = score
-                        realm.insertOrUpdate(scoreb)
-                        realm.commitTransaction()
 
-                      //  scoreboardLogic.addOrUpdateScoreboard(scoreb)
+                        val scoreb = scoreboard.first()
+                        realm.beginTransaction()
+                        scoreb.score = score
+
+
+                        scoreboardLogic.addOrUpdateScoreboard(scoreb)
                     } catch (e: Exception) {
                         var exr = e.localizedMessage
                         Toast.makeText(this, exr, Toast.LENGTH_LONG).show()
